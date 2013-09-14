@@ -1,4 +1,4 @@
-garm-dev-box
+tiling-dev-box
 ============
 
 A collection of notes and config files for debian testing (jessie) amd64
@@ -68,33 +68,30 @@ Try it out!
     * `$ sudo -i`
     * `$ vi /etc/ssh/sshd_config` PermitRootLogin no
 1. Setup VirtualBox Guest Additions
-
     * `$ apt-get install dkms`
     * `$ # install vbox guest additions cd`
     * `$ mount /media/cdrom`
     * `$ cd /media/cdrom`
     * `$ sudo sh ./VBoxLinuxAdditions.run`
-
 1. Install Extra Packages:
-
     * `$ apt-get install xorg`   # basic desktop environment files
     * `$ apt-get install git`    # DVCS track config files and do work
 
 #### Configure System:
 
-* .bashrc
+* *.bashrc*
     1. user
     1. root
-* xmonad -- slick tiling desktop environment
+* *xmonad* -- slick tiling desktop environment
     1. `$ apt-get install xmonad`
-* vim -- editor of choice
+* *vim* -- editor of choice
     1. `$ apt-get install vim` 
     1. vimrc
-* urxvt -- terminal with good unicode support
+* *urxvt* -- terminal with good unicode support
     1. `$ apt-get install rxvt-unicode-256color`
     1. $ vi ~/.Xresources
     1. $ xrdb -merge ~/.Xresources
-* Setup iceweasel-vimperator -- like firefox browser + vim bindings
+* *iceweasel-vimperator* -- like firefox browser + vim bindings
     1. `$ apt-get install iceweasel-vimperator`
     1. Setup security to not save passwords etc.
     1. Set main page to https://duckduckgo.com
@@ -106,14 +103,14 @@ Try it out!
         * :mkvimperatorrc
         * edit to liking
         * `$ vim ~/.vimperatorrc`
-* Configure compton -- standalone compositing window manager
+* *compton* -- standalone compositing window manager
     1. `$ apt-get install compton`
     1. mkdir ~/.config
     1. cp /usr/share/doc/compton/examples/comtpon/sample.conf ~/.config/compton.conf
     1. [compton tips](http://duncanlock.net/blog/2013/06/07/how-to-switch-to-compton-for-beautiful-tear-free-compositing-in-xfce/)
     1. `$ compton &`
     1. ~/.xprofile -- compton -cGb
-* conky # pretty resource monitor
+* *conky* -- pretty resource monitor
     1. `$ apt-get install conky`
 
 ### Issues:
