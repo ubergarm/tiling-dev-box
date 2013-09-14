@@ -42,7 +42,7 @@ Try it out!
 #### Virtual Box Setup:
 
 1. Download desired debian netinst
-    * `wget http://cdimage.debian.org/cdimage/daily-builds/daily/arch-latest/amd64/iso-cd/debian-testing-amd64-netinst.iso`
+    * `$ wget http://cdimage.debian.org/cdimage/daily-builds/daily/arch-latest/amd64/iso-cd/debian-testing-amd64-netinst.iso`
 1. Fire up Virtual Box 
     * click "New"
     * Name: "debian-dev-box"
@@ -61,27 +61,24 @@ Try it out!
 1. tasksel "Choose software to install: only select Standard and SSH"
 1. Setup grub in MBR
 1. Reboot, login, change config files.
-
-    $ su
-    $ apt-get install sudo
-    $ vi /etc/sudoers
-    $ add this line-> person ALL=(ALL:ALL) ALL
-    $ exit
-    $ sudo -i
-    $ vi /etc/ssh/sshd_config # PermitRootLogin no
-
+    * `$ su`
+    * `$ apt-get install sudo`
+    * `$ vi /etc/sudoers` person ALL=(ALL:ALL) ALL
+    * `$ exit`
+    * `$ sudo -i`
+    * `$ vi /etc/ssh/sshd_config` PermitRootLogin no
 1. Setup VirtualBox Guest Additions
 
-    $ apt-get install dkms
-    $ # install vbox guest additions cd
-    $ mount /media/cdrom
-    $ cd /media/cdrom
-    $ sudo sh ./VBoxLinuxAdditions.run
+    * `$ apt-get install dkms`
+    * `$ # install vbox guest additions cd`
+    * `$ mount /media/cdrom`
+    * `$ cd /media/cdrom`
+    * `$ sudo sh ./VBoxLinuxAdditions.run`
 
 1. Install Extra Packages:
 
-    $ apt-get install xorg   # basic desktop environment files
-    $ apt-get install git    # to track config files and do work
+    * `$ apt-get install xorg`   # basic desktop environment files
+    * `$ apt-get install git`    # DVCS track config files and do work
 
 #### Configure System:
 
@@ -89,16 +86,16 @@ Try it out!
     1. user
     1. root
 * xmonad -- slick tiling desktop environment
-    1. `apt-get install xmonad`
+    1. `$ apt-get install xmonad`
 * vim -- editor of choice
-    1. `apt-get install vim` 
+    1. `$ apt-get install vim` 
     1. vimrc
 * urxvt -- terminal with good unicode support
-    1. `apt-get install rxvt-unicode-256color`
+    1. `$ apt-get install rxvt-unicode-256color`
     1. $ vi ~/.Xresources
     1. $ xrdb -merge ~/.Xresources
 * Setup iceweasel-vimperator -- like firefox browser + vim bindings
-    1. `apt-get install iceweasel-vimperator`
+    1. `$ apt-get install iceweasel-vimperator`
     1. Setup security to not save passwords etc.
     1. Set main page to https://duckduckgo.com
     1. Install Adblock Plus
@@ -108,16 +105,16 @@ Try it out!
     1. Generate a base config file
         * :mkvimperatorrc
         * edit to liking
-        * `vim ~/.vimperatorrc`
+        * `$ vim ~/.vimperatorrc`
 * Configure compton -- standalone compositing window manager
-    1. `apt-get install compton`
+    1. `$ apt-get install compton`
     1. mkdir ~/.config
     1. cp /usr/share/doc/compton/examples/comtpon/sample.conf ~/.config/compton.conf
     1. [compton tips](http://duncanlock.net/blog/2013/06/07/how-to-switch-to-compton-for-beautiful-tear-free-compositing-in-xfce/)
-    1. `compton &`
+    1. `$ compton &`
     1. ~/.xprofile -- compton -cGb
 * conky # pretty resource monitor
-    1. `apt-get install conky`
+    1. `$ apt-get install conky`
 
 ### Issues:
 
@@ -127,7 +124,7 @@ Try it out!
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads/) -- `sudo apt-get install virtualbox-4.2`
 
 #### Special Thanks:
-[l3net](http://l3net.wordpress.com/2013/04/30/lightweight-debian-lxde-desktop-from-scratch/) -- Great review of desktops and ram usage on various linux flavors!
-[cool bash prompts](http://makandracards.com/makandra/1090-customize-your-bash-prompt)
-[pretty xterm stuff](http://unix4lyfe.org/xterm/)
-[better font help](http://community.linuxmint.com/tutorial/view/1021)
+* [l3net](http://l3net.wordpress.com/2013/04/30/lightweight-debian-lxde-desktop-from-scratch/) -- Great review of desktops and ram usage on various linux flavors!
+* [cool bash prompts](http://makandracards.com/makandra/1090-customize-your-bash-prompt)
+* [pretty xterm stuff](http://unix4lyfe.org/xterm/)
+* [better font help](http://community.linuxmint.com/tutorial/view/1021)
