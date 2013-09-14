@@ -1,0 +1,13 @@
+"3.7.1
+" vim: set ft=vimperator:
+
+" Define the leader key:
+let mapleader = ','
+
+" Reload .vimperatorrc config file without restarting:
+:map <Leader>r :source ~/.vimperatorrc<CR>
+
+" Some shortcuts
+:map <Leader>s :tabopen duckduckgo<SPACE>
+:map <Leader>b :back<CR>
+:map <Leader>f :forward<CR>

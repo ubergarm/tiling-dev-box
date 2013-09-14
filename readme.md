@@ -27,7 +27,7 @@ Try it out!
     $ <alt-shift-enter>
     $ vimperator-iceweasel
     $ ,s xmonad
-
+       
 #### TODO:
 
 1. Setup xmonad files
@@ -82,13 +82,22 @@ Try it out!
 * *.bashrc*
     1. user
     1. root
+* *source code pro* a nice monotype font for programming
+    1. [source code pro](https://github.com/adobe/source-code-pro)
+    1. download and uncompress into /usr/share/fonts/truetype
+* *vim* -- editor of choice
+    1. `$ apt-get install vim-nox` -- compiled with +python
+    1. Setup .vim/
+    1. setup .vimrc
 * *xmonad* -- slick tiling desktop environment
     1. `$ apt-get install xmonad`
-* *vim* -- editor of choice
-    1. `$ apt-get install vim` 
-    1. vimrc
+* *xmombar* -- lightweight, text-based status bar
+    1. `$ apt-get install xmobar`
+    1. [xmobar tips](http://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen%27s_Configuration#Installing_xmobar)
+    1. [xmobmar plugins](http://projects.haskell.org/xmobar/#system-monitor-plugins)
 * *urxvt* -- terminal with good unicode support
     1. `$ apt-get install rxvt-unicode-256color`
+    1. [rxvt-unicode](https://wiki.archlinux.org/index.php/Rxvt-unicode)
     1. $ vi ~/.Xresources
     1. $ xrdb -merge ~/.Xresources
 * *iceweasel-vimperator* -- like firefox browser + vim bindings
