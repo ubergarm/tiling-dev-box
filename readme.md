@@ -75,6 +75,10 @@ Try it out!
     * `$ sudo sh ./VBoxLinuxAdditions.run`
 1. Install Extra Packages:
     * `$ apt-get install xorg`   # basic desktop environment files
+    * `$ apt-get install xserver-xorg-video-ati`
+    * `$ apt-get install firmware-linux-nonfree` # only if you *must* :(
+    * `$ sudo Xorg -config`      # your milage may vary
+    * `$ xrandr`                 # setup a script for your monitor config
     * `$ apt-get install git`    # DVCS track config files and do work
 
 #### Configure System:
@@ -119,8 +123,10 @@ Try it out!
     1. [compton tips](http://duncanlock.net/blog/2013/06/07/how-to-switch-to-compton-for-beautiful-tear-free-compositing-in-xfce/)
     1. `$ compton &`
     1. ~/.xprofile -- compton -cGb
-* *conky* -- pretty resource monitor
-    1. `$ apt-get install conky`
+* *xorg* -- this old girl needs some love to look good...
+    1. `xrandr --output DisplayPort-0 --mode 1920x1080` -- turn on external displayport
+    1. `xrandr --output LVDS --auto --output DisplayPort-0 --auto --same-as LVDS` -- clone screens
+    1. `xrandr --output LVDS --auto --output DisplayPort-0 --auto --above LVDS` -- stack screens
 
 ### Issues:
 
