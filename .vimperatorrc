@@ -11,3 +11,7 @@ let mapleader = ','
 :map <Leader>s :tabopen duckduckgo<SPACE>
 :map <Leader>b :back<CR>
 :map <Leader>f :forward<CR>
+
+" Faster scrolling
+:map J 12j
+:map K 12k

@@ -6,5 +6,7 @@ xsetroot -cursor_name left_ptr
 xrdb -merge ~/.Xresources
 # start compositing windows manager in daemon mode
 compton -cGb
+# set backround images 
+nitrogen --restore 
 #start xmonad
 exec xmonad

@@ -12,7 +12,7 @@ URxvt*depth: 32
 ! URxvt*background: colour
 ! rgba:1111/1111/1111/dddd
 ! or [%%] opacity and #bgcolor
-URxvt*background: [95]#000000
+URxvt*background: [85]#000000
 
 ! Use the specified colour as the windows foreground colour [default Black];
 ! URxvt*foreground: colour
@@ -74,7 +74,7 @@ URxvt*foreground: White
 
 ! Select the fonts to be used. This is a comma separated list of font names
 ! URxvt*font: fontlist
-URxvt*font: xft:SourceCodePro-Medium:size=11
+URxvt*font: xft:SourceCodePro-Medium:size=12
 
 ! URxvt*boldFont: fontlist
 

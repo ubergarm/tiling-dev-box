@@ -16,9 +16,9 @@ main = do
   xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/xmobar.hs"
   xmonad defaultConfig {
     modMask = mod1Mask, 
-    borderWidth = 3,
+    borderWidth = 2,
     normalBorderColor = "#202020",
-    focusedBorderColor = "#50F050",
+    focusedBorderColor = "#40A040",
     terminal = "urxvt",
     manageHook = manageDocks <+> manageHook defaultConfig,
     layoutHook = avoidStruts $ layoutHook defaultConfig,

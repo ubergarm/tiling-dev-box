@@ -1,5 +1,5 @@
 Config {
-       font = "xft:SourceCodePro-Medium:pixelsize=11",
+       font = "xft:SourceCodePro-Medium:=12",
        -- font = "xft:Monospace:pixelsize=11",
        lowerOnStart = False,
        commands = [
@@ -9,10 +9,10 @@ Config {
                 Run Memory ["-t","Mem: <usedratio>%"] 10,
                 Run Swap [] 10,
                 Run Date "%a %b %_d %l:%M" "date" 10,
-                Run Network "eth0" [] 10,
+                Run Network "wlan0" [] 10,
                 Run StdinReader
                 ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %eth0% | %cpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %KCHO%"
+       , template = "%StdinReader% }{ %wlan0% | %cpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %KCHO%"
        }

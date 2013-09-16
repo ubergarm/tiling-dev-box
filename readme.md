@@ -118,15 +118,21 @@ Try it out!
         * `$ vim ~/.vimperatorrc`
 * *compton* -- standalone compositing window manager
     1. `$ apt-get install compton`
-    1. mkdir ~/.config
-    1. cp /usr/share/doc/compton/examples/comtpon/sample.conf ~/.config/compton.conf
+    1. cp /usr/share/doc/compton/examples/comtpon/sample.conf ~/.compton.conf
     1. [compton tips](http://duncanlock.net/blog/2013/06/07/how-to-switch-to-compton-for-beautiful-tear-free-compositing-in-xfce/)
     1. `$ compton &`
     1. ~/.xprofile -- compton -cGb
 * *xorg* -- this old girl needs some love to look good...
-    1. `xrandr --output DisplayPort-0 --mode 1920x1080` -- turn on external displayport
-    1. `xrandr --output LVDS --auto --output DisplayPort-0 --auto --same-as LVDS` -- clone screens
-    1. `xrandr --output LVDS --auto --output DisplayPort-0 --auto --above LVDS` -- stack screens
+    1. `$ xrandr --output DisplayPort-0 --mode 1920x1080` -- turn on external displayport
+    1. `$ xrandr --output LVDS --auto --output DisplayPort-0 --auto --same-as LVDS` -- clone screens
+    1. `$ xrandr --output LVDS --auto --output DisplayPort-0 --auto --above LVDS` -- stack screens
+* *nitrogen* -- fast desktop background setter for X windows
+    1. `$ apt-get install nitrogen`
+    1. config file lives in ~/.config/nitrogen/
+    1. put image files into ~/.config/nitrogen/
+* *xclip* -- CLI to X selections clipboard
+    1. `$ apt-apt install xclip`
+    1. `$ uptime | xclip` -- middle click somewhere to paste the uptime!
 
 ### Issues:
 
