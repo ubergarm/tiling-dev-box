@@ -8,5 +8,7 @@ xrdb -merge ~/.Xresources
 compton -cGb
 # set backround images 
 nitrogen --restore 
+# make sure screensaver is running so we can lock screen
+xscreensaver -nosplash &
 #start xmonad
 exec xmonad

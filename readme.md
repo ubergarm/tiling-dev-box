@@ -84,8 +84,9 @@ Try it out!
 #### Configure System:
 
 * *.bashrc*
-    1. user
-    1. root
+    1. vi mode
+    1. user prompt
+    1. root prompt
 * *source code pro* a nice monotype font for programming
     1. [source code pro](https://github.com/adobe/source-code-pro)
     1. download and uncompress into /usr/share/fonts/truetype
@@ -133,6 +134,11 @@ Try it out!
 * *xclip* -- CLI to X selections clipboard
     1. `$ apt-apt install xclip`
     1. `$ uptime | xclip` -- middle click somewhere to paste the uptime!
+* *scrot* -- screen shot utility
+* *pidgin* -- IM app
+* *qiv* -- lightweight image viewer
+* *cowsay* -- hehehehe... *giggle giggle*
+
 
 ### Issues:
 
@@ -146,3 +152,4 @@ Try it out!
 * [cool bash prompts](http://makandracards.com/makandra/1090-customize-your-bash-prompt)
 * [pretty xterm stuff](http://unix4lyfe.org/xterm/)
 * [better font help](http://community.linuxmint.com/tutorial/view/1021)
+* [xmonad customizations](http://www.chipstips.com/?category_name=wildly-popular)

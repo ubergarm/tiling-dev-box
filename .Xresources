@@ -98,9 +98,11 @@ URxvt*font: xft:SourceCodePro-Medium:size=12
 
 ! True: set the urgency hint for the wm on receipt of a bell character.
 ! URxvt*urgentOnBell: boolean
+URxvt*urgentOnBell: true
 
 ! True: use visual bell on receipt of a bell character; option -vb.  False: no
 ! URxvt*visualBell: boolean
+URxvt*visualBell: true
 
 ! True: start as a login shell by prepending a - to argv[0] of the shell;
 ! URxvt*loginShell: boolean
@@ -144,7 +146,7 @@ URxvt*scrollTtyKeypress: true
 
 ! Save number lines in the scrollback buffer [default 64]. This resource is
 ! URxvt*saveLines: number
-URxvt*saveLines: 500
+URxvt*saveLines: 5000
 
 ! Internal border of number pixels. This resource is limited to 100; option
 ! URxvt*internalBorder: number
@@ -264,6 +266,7 @@ URxvt*saveLines: 500
 
 ! Specifies the program to be started with a URL argument. Used by the
 ! URxvt*url-launcher: string
+URxvt*url-launcher: iceweasel
 
 ! Compile frills: Sets the WM_TRANSIENT_FOR property to the given window id.
 ! URxvt*transient-for: windowid
