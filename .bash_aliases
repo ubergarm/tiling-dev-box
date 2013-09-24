@@ -2,6 +2,10 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias iceweasel='iceweasel > /dev/null 2>&1'
+
+# remove dos/windows line feeds '\r'
+alias dos2unix="sed 's/^M$//'"
+
 # environment defaults
 export EDITOR=vim
 
