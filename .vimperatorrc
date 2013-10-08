@@ -5,13 +5,18 @@
 let mapleader = ','
 
 " Reload .vimperatorrc config file without restarting:
-:map <Leader>r :source ~/.vimperatorrc<CR>
+:map <Leader>sv :source ~/.vimperatorrc<CR>
 
 " Some shortcuts
-:map <Leader>s :tabopen duckduckgo<SPACE>
+:map <Leader>d :tabopen duckduckgo<SPACE>
 :map <Leader>b :back<CR>
 :map <Leader>f :forward<CR>
 
 " Faster scrolling
 :map J 12j
 :map K 12k
+
+" Fancy Hint Extensions via extendedhinttags XPath string?
+" to watch youtube videos using mplayer and youtube-dl
+" first to ;y<hint> to yank link location to clipboard
+:map <Leader>v :!~/projects/youtube-dl/stream.sh $(xclip -o) &<CR>

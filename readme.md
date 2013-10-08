@@ -28,16 +28,12 @@ Try it out!
     $ vimperator-iceweasel
     $ ,s xmonad
        
-#### TODO:
+#### BACKLOG:
 
-1. Setup xmonad files
-1. setup vimperator-iceweasel files
-1. setup .x files for good fonts
-1. setup uxvrt
-1. Curate .vimrc files
-1. Control everything with git
+1. bindings to run iceweasel-vimperator inside docker container and ssh -X into it
+1. thunderbird with mutterator vim bindings
+1. youtube-dl with script and bindings to extended hint yank xclip -o videos with mplayer
 1. Automate deployment with scripts/ansible.
-1. Get this working with LXC
 
 #### Virtual Box Setup:
 
