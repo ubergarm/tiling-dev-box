@@ -10,14 +10,16 @@ Config {
                 Run Memory ["-t","Mem: <usedratio>%"] 10,
                 Run Swap [] 10,
                 Run Date "%a %b %_d %l:%M" "date" 10,
+                Run BatteryP ["BAT0"] ["-t", "<acstatus><watts> (<left>%)", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=green>On</fc> - ", "-i", "", "-L", "-15", "-H", "-5", "-l", "red", "-m", "blue", "-h", "green"] 600,
+                -- Run ThermalZone 0 ["-t","<id>: <temp>C"] 30,
+                -- WARNING: ThermalZone has crazy fast away memory issue??
                 Run Network "wlan0" [] 10,
-                -- Run Battery ["-t","Batt: %","-L","25","-H","75","--low","#FF0000","--normal","#F9FF00","--high","#00FF00"] 600,
-                -- Run Volume "default" "Master" [] 10,
                 Run StdinReader
                 ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %wlan0% | %cpu% | %memory% | %swap% | <fc=#ee9a00>%date%</fc> | %KCHO%"
+       , template = "%StdinReader% }{ %wlan0% | %cpu% | %memory% | %swap% | %battery% | <fc=#ee9a00>%date%</fc> | %KCHO%"
+       -- , template = "%StdinReader% }{ %wlan0% | %cpu% | %memory% | %swap% | %battery% | %thermal0% | <fc=#ee9a00>%date%</fc> | %KCHO%"
        -- , template = "%StdinReader% }{ %wlan0% | %cpu% | %memory% * %swap% * %battery% %default:Master%  <fc=#ee9a00>%date%</fc> | %KCHO%"
        -- , template = "%StdinReader% }{ %wlan0% | %cpu% | %memory% * %swap% %volume%  <fc=#ee9a00>%date%</fc> | %KCHO%"
        }

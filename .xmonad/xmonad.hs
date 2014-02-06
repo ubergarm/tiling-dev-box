@@ -56,7 +56,10 @@ myKeys =
       ((myModMask, xK_Left), prevWS),                     -- previous workspace
       ((myModMask, xK_equal), spawn "amixer set Master 1+"),  -- turn up volume 1dB
       ((myModMask, xK_minus), spawn "amixer set Master 3-"),  -- turn down volume 3dB
-      ((myModMask, xK_F9), spawn "xscreensaver-command -lock && xset dpms force off") -- lock workstation and turn off display
+      ((myModMask, xK_0), spawn "amixer set Capture 1+"),  -- turn up mic 1dB
+      ((myModMask, xK_9), spawn "amixer set Capture 3-"),  -- turn down mic 3dB
+      ((myModMask, xK_F9), spawn "sleep 3 && xset dpms force off"), -- give time to set down keyboard, then turn off display
+      ((myModMask, xK_F10), spawn "xscreensaver-command -lock && xset dpms force off") -- lock workstation and turn off display
       -- ((myModMask, xK_F1), spawn "xmonad_keys.sh"),       -- toggle custom help
     ]
 

@@ -76,6 +76,7 @@ Try it out!
     * `$ sudo Xorg -config`      # your milage may vary
     * `$ xrandr`                 # setup a script for your monitor config
     * `$ apt-get install git`    # DVCS track config files and do work
+    * `$ apt-get install qpdfview` # pdf viewer - ugh qt4
 
 #### Configure System:
 

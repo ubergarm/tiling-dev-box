@@ -20,3 +20,39 @@ export PS1='\[\e[01;30m\]\h`if [ $? = 0 ]; then echo "\[\e[32m\] ^_^ "; else ech
 
 # Set bash to use vi bindings! ESC to enter edit mode by default
 set -o vi
+
+# ssh-agent stuff from http://mah.everybody.org/docs/ssh
+SSH_ENV="$HOME/.ssh/environment"
+function start_agent {
+     echo "Initialising new SSH agent..."
+     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+     echo succeeded
+     chmod 600 "${SSH_ENV}"
+     . "${SSH_ENV}" > /dev/null
+     /usr/bin/ssh-add;
+     #/usr/bin/ssh-add ~/.ssh/id_rsa.others
+}
+
+# Source SSH settings, if applicable
+if [ -f "${SSH_ENV}" ]; then
+     . "${SSH_ENV}" > /dev/null
+     #ps ${SSH_AGENT_PID} doesn't work under cywgin
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+         start_agent;
+     }
+else
+     start_agent;
+fi
+
+# make ansible not use cowsay by default, yes seriously
+# http://docs.ansible.com/faq.html
+export ANSIBLE_NOCOWS=1
+
+# Setup python virtualenv
+[ -s $HOME/projects/virtualenv/bin/activate ] && source $HOME/projects/virtualenv/bin/activate # This loads NVM
+# Setup Node Version Manager (like python virtualenv)
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
+# Setup docker scripts env -- a bit hacky for now
+[ -d $HOME/mathood/projects/containers/bin ] && export PATH=$PATH:$HOME/mathood/projects/containers/bin
+# fix term stuff
+TERM=xterm-256color
