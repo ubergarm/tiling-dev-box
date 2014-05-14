@@ -21,7 +21,7 @@ import System.IO
 main = do
   xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/xmobar.hs"
   xmonad $ defaultConfig {
-    modMask = myModMask, 
+    modMask = myModMask,
     borderWidth = 2,
     normalBorderColor = "#202020",
     focusedBorderColor = "#40A040",
@@ -37,7 +37,7 @@ main = do
   } `additionalKeys` myKeys      
 
 -- Mod1Mask = left alt, Mod4Mask = left windows key
-myModMask = mod1Mask 
+myModMask = mod4Mask
 -- myManageHook = manageDocks <+> manageHook defaultConfig
 myManageHook = composeAll
     [ className =? "Gimp"                   --> doFloat,

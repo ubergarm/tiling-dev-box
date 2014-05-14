@@ -135,6 +135,11 @@ Try it out!
 * *pidgin* -- IM app
 * *qiv* -- lightweight image viewer
 * *cowsay* -- hehehehe... *giggle giggle*
+* *weechat* -- irc client `/script install hilites.rb`
+* *dzen2* -- much better than that notify crap which doesn't work
+* [notify](https://wiki.archlinux.org/index.php/Desktop_notifications)
+* [notify-osd](http://andresmoreira.com/post/49154620443/108602359)
+* *notifyosd* -- `apt-get install notify-osd libnotify-bin` notify-send "title" "message" -- what about notification-daemon ?
 
 
 ### Issues:
